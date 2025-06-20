@@ -26,6 +26,24 @@
 		66651D4D2E059497003559B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		66651D562E0599D1003559B9 /* collectionView */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = collectionView;
+			sourceTree = "<group>";
+		};
+		66651D572E0599E3003559B9 /* tableView */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = tableView;
+			sourceTree = "<group>";
+		};
+		66651D642E059E9E003559B9 /* extensions */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = extensions;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
 /* Begin PBXFrameworksBuildPhase section */
 		66651D192E057AA2003559B9 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
@@ -56,6 +74,8 @@
 		66651D3D2E059497003559B9 /* cells */ = {
 			isa = PBXGroup;
 			children = (
+				66651D572E0599E3003559B9 /* tableView */,
+				66651D562E0599D1003559B9 /* collectionView */,
 			);
 			path = cells;
 			sourceTree = "<group>";
@@ -96,6 +116,7 @@
 		66651D492E059497003559B9 /* utilities */ = {
 			isa = PBXGroup;
 			children = (
+				66651D642E059E9E003559B9 /* extensions */,
 			);
 			path = utilities;
 			sourceTree = "<group>";
@@ -145,6 +166,11 @@
 			buildRules = (
 			);
 			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				66651D562E0599D1003559B9 /* collectionView */,
+				66651D572E0599E3003559B9 /* tableView */,
+				66651D642E059E9E003559B9 /* extensions */,
 			);
 			name = "The Movies";
 			packageProductDependencies = (
@@ -245,8 +271,8 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -273,8 +299,8 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
