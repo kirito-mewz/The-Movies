@@ -76,8 +76,8 @@
 		66651D3D2E059497003559B9 /* cells */ = {
 			isa = PBXGroup;
 			children = (
-				66651D572E0599E3003559B9 /* tableView */,
 				66651D562E0599D1003559B9 /* collectionView */,
+				66651D572E0599E3003559B9 /* tableView */,
 			);
 			path = cells;
 			sourceTree = "<group>";
@@ -142,10 +142,10 @@
 		66651D4E2E059497003559B9 /* The Movies */ = {
 			isa = PBXGroup;
 			children = (
-				66651D4D2E059497003559B9 /* Info.plist */,
 				66651D3D2E059497003559B9 /* cells */,
 				66651D3E2E059497003559B9 /* components */,
 				66651D412E059497003559B9 /* delegates */,
+				66651D4D2E059497003559B9 /* Info.plist */,
 				66651D432E059497003559B9 /* resources */,
 				66651D482E059497003559B9 /* storyboards */,
 				66651D492E059497003559B9 /* utilities */,
