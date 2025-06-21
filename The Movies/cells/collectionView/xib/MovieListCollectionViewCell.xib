@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23727" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23721"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="MovieListCollectionViewCell" customModule="The_Movies" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="235" height="395"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="235" height="395"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hOa-A0-2wr">
+                        <rect key="frame" x="0.0" y="0.0" width="235" height="395"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="popular_2" translatesAutoresizingMaskIntoConstraints="NO" id="l5v-MJ-FPW" userLabel="Movie Image View">
+                                <rect key="frame" x="0.0" y="0.0" width="235" height="322.33333333333331"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Avengers Endgame" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ice-ZE-2x8" userLabel="Movie Title Label">
+                                <rect key="frame" x="0.0" y="336.33333333333331" width="235" height="23"/>
+                                <fontDescription key="fontDescription" name="GeezaPro" family="Geeza Pro" pointSize="18"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="8.20" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0BZ-Va-HCX" userLabel="Rating Label">
+                                <rect key="frame" x="0.0" y="365.33333333333331" width="32" height="19.666666666666686"/>
+                                <fontDescription key="fontDescription" name="GeezaPro-Bold" family="Geeza Pro" pointSize="16"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3px-4x-9Ah" userLabel="Rating Control" customClass="RatingControl" customModule="The_Movies" customModuleProvider="target">
+                                <rect key="frame" x="40" y="367.33333333333331" width="80" height="16"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="KIs-cA-Mni"/>
+                                    <constraint firstAttribute="height" constant="16" id="p1K-Fd-pJ8"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="starCount">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="size" keyPath="starSize">
+                                        <size key="value" width="16" height="16"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="rating">
+                                        <integer key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="l5v-MJ-FPW" firstAttribute="top" secondItem="hOa-A0-2wr" secondAttribute="top" id="2vu-sM-KXY"/>
+                            <constraint firstAttribute="bottom" secondItem="0BZ-Va-HCX" secondAttribute="bottom" constant="10" id="FPf-Gz-kv9"/>
+                            <constraint firstItem="3px-4x-9Ah" firstAttribute="leading" secondItem="0BZ-Va-HCX" secondAttribute="trailing" constant="8" id="PAy-wb-fSP"/>
+                            <constraint firstItem="l5v-MJ-FPW" firstAttribute="leading" secondItem="hOa-A0-2wr" secondAttribute="leading" id="Q9e-i4-x85"/>
+                            <constraint firstItem="0BZ-Va-HCX" firstAttribute="leading" secondItem="hOa-A0-2wr" secondAttribute="leading" id="ZDc-Of-tNX"/>
+                            <constraint firstAttribute="trailing" secondItem="l5v-MJ-FPW" secondAttribute="trailing" id="aqX-tZ-0z9"/>
+                            <constraint firstItem="Ice-ZE-2x8" firstAttribute="leading" secondItem="hOa-A0-2wr" secondAttribute="leading" id="mch-3S-3UO"/>
+                            <constraint firstItem="0BZ-Va-HCX" firstAttribute="centerY" secondItem="3px-4x-9Ah" secondAttribute="centerY" id="nZl-pZ-dxB"/>
+                            <constraint firstAttribute="trailing" secondItem="Ice-ZE-2x8" secondAttribute="trailing" id="ovC-aJ-BJR"/>
+                            <constraint firstItem="Ice-ZE-2x8" firstAttribute="top" secondItem="l5v-MJ-FPW" secondAttribute="bottom" constant="14" id="t0V-vg-lNd"/>
+                            <constraint firstItem="3px-4x-9Ah" firstAttribute="top" secondItem="Ice-ZE-2x8" secondAttribute="bottom" constant="8" id="zQQ-V0-huK"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="hOa-A0-2wr" secondAttribute="bottom" id="6Id-B1-iCk"/>
+                <constraint firstAttribute="trailing" secondItem="hOa-A0-2wr" secondAttribute="trailing" id="RDX-5C-dAv"/>
+                <constraint firstItem="hOa-A0-2wr" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="Zc5-UK-JoV"/>
+                <constraint firstItem="hOa-A0-2wr" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="k9h-kM-N4v"/>
+            </constraints>
+            <connections>
+                <outlet property="movieImageView" destination="l5v-MJ-FPW" id="ffh-bF-kjL"/>
+                <outlet property="movieTitleLabel" destination="Ice-ZE-2x8" id="Cyz-zX-wUp"/>
+                <outlet property="ratingControl" destination="3px-4x-9Ah" id="bDS-Sb-6ll"/>
+                <outlet property="ratingLabel" destination="0BZ-Va-HCX" id="xgT-ps-EcX"/>
+            </connections>
+            <point key="canvasLocation" x="54.198473282442748" y="20.774647887323944"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="popular_2" width="288" height="426.66665649414062"/>
+    </resources>
+</document>
