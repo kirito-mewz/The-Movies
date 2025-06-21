@@ -36,6 +36,10 @@
 		66651DEF2E06E4C4003559B9 /* ShowcaseCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 66651DED2E06E4C4003559B9 /* ShowcaseCollectionViewCell.xib */; };
 		66651DF22E06E75C003559B9 /* ShowcaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66651DF02E06E75C003559B9 /* ShowcaseTableViewCell.swift */; };
 		66651DF32E06E75C003559B9 /* ShowcaseTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 66651DF12E06E75C003559B9 /* ShowcaseTableViewCell.xib */; };
+		66651DFC2E06EBC0003559B9 /* PersonCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66651DFA2E06EBC0003559B9 /* PersonCollectionViewCell.swift */; };
+		66651DFD2E06EBC0003559B9 /* PersonCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 66651DFB2E06EBC0003559B9 /* PersonCollectionViewCell.xib */; };
+		66651E002E06EBD7003559B9 /* PersonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66651DFE2E06EBD7003559B9 /* PersonTableViewCell.swift */; };
+		66651E012E06EBD7003559B9 /* PersonTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 66651DFF2E06EBD7003559B9 /* PersonTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -70,7 +74,19 @@
 		66651DED2E06E4C4003559B9 /* ShowcaseCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShowcaseCollectionViewCell.xib; sourceTree = "<group>"; };
 		66651DF02E06E75C003559B9 /* ShowcaseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowcaseTableViewCell.swift; sourceTree = "<group>"; };
 		66651DF12E06E75C003559B9 /* ShowcaseTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShowcaseTableViewCell.xib; sourceTree = "<group>"; };
+		66651DFA2E06EBC0003559B9 /* PersonCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonCollectionViewCell.swift; sourceTree = "<group>"; };
+		66651DFB2E06EBC0003559B9 /* PersonCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PersonCollectionViewCell.xib; sourceTree = "<group>"; };
+		66651DFE2E06EBD7003559B9 /* PersonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonTableViewCell.swift; sourceTree = "<group>"; };
+		66651DFF2E06EBD7003559B9 /* PersonTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PersonTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		66651E022E06EFC0003559B9 /* protocols */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = protocols;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		66651D192E057AA2003559B9 /* Frameworks */ = {
@@ -119,6 +135,7 @@
 		66651D412E059497003559B9 /* delegates */ = {
 			isa = PBXGroup;
 			children = (
+				66651E022E06EFC0003559B9 /* protocols */,
 				66651D3F2E059497003559B9 /* AppDelegate.swift */,
 				66651D402E059497003559B9 /* SceneDelegate.swift */,
 			);
@@ -173,6 +190,7 @@
 				66651DAA2E06DC51003559B9 /* MovieListCollectionViewCell.swift */,
 				66651DA92E06DC51003559B9 /* GenreCollectionViewCell.swift */,
 				66651DEC2E06E4C4003559B9 /* ShowcaseCollectionViewCell.swift */,
+				66651DFA2E06EBC0003559B9 /* PersonCollectionViewCell.swift */,
 			);
 			path = swift;
 			sourceTree = "<group>";
@@ -184,6 +202,7 @@
 				66651DAE2E06DC51003559B9 /* MovieListCollectionViewCell.xib */,
 				66651DAD2E06DC51003559B9 /* GenreCollectionViewCell.xib */,
 				66651DED2E06E4C4003559B9 /* ShowcaseCollectionViewCell.xib */,
+				66651DFB2E06EBC0003559B9 /* PersonCollectionViewCell.xib */,
 			);
 			path = xib;
 			sourceTree = "<group>";
@@ -205,6 +224,7 @@
 				66651DB82E06DC59003559B9 /* CheckShowtimeTableViewCell.swift */,
 				66651DBA2E06DC59003559B9 /* MovieWithGenreTableViewCell.swift */,
 				66651DF02E06E75C003559B9 /* ShowcaseTableViewCell.swift */,
+				66651DFE2E06EBD7003559B9 /* PersonTableViewCell.swift */,
 			);
 			path = swift;
 			sourceTree = "<group>";
@@ -217,6 +237,7 @@
 				66651DBD2E06DC59003559B9 /* CheckShowtimeTableViewCell.xib */,
 				66651DBF2E06DC59003559B9 /* MovieWithGenreTableViewCell.xib */,
 				66651DF12E06E75C003559B9 /* ShowcaseTableViewCell.xib */,
+				66651DFF2E06EBD7003559B9 /* PersonTableViewCell.xib */,
 			);
 			path = xib;
 			sourceTree = "<group>";
@@ -270,6 +291,9 @@
 			buildRules = (
 			);
 			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				66651E022E06EFC0003559B9 /* protocols */,
 			);
 			name = "The Movies";
 			packageProductDependencies = (
@@ -326,6 +350,8 @@
 				66651DF32E06E75C003559B9 /* ShowcaseTableViewCell.xib in Resources */,
 				66651DCA2E06DC59003559B9 /* PopularMoviesTableViewCell.xib in Resources */,
 				66651DEF2E06E4C4003559B9 /* ShowcaseCollectionViewCell.xib in Resources */,
+				66651DFD2E06EBC0003559B9 /* PersonCollectionViewCell.xib in Resources */,
+				66651E012E06EBD7003559B9 /* PersonTableViewCell.xib in Resources */,
 				66651D522E059497003559B9 /* Assets.xcassets in Resources */,
 				66651D532E059497003559B9 /* LaunchScreen.storyboard in Resources */,
 				66651D542E059497003559B9 /* Main.storyboard in Resources */,
@@ -339,6 +365,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				66651E002E06EBD7003559B9 /* PersonTableViewCell.swift in Sources */,
 				66651D4F2E059497003559B9 /* AppDelegate.swift in Sources */,
 				66651D502E059497003559B9 /* SceneDelegate.swift in Sources */,
 				66651D7E2E06A46E003559B9 /* RatingControl.swift in Sources */,
@@ -352,6 +379,7 @@
 				66651DE82E06E252003559B9 /* GenreVO.swift in Sources */,
 				66651DE42E06E24E003559B9 /* UILabel+Extensions.swift in Sources */,
 				66651DE52E06E24E003559B9 /* UITableViewCell+Extensions.swift in Sources */,
+				66651DFC2E06EBC0003559B9 /* PersonCollectionViewCell.swift in Sources */,
 				66651DB22E06DC51003559B9 /* GenreCollectionViewCell.swift in Sources */,
 				66651DB32E06DC51003559B9 /* MovieListCollectionViewCell.swift in Sources */,
 				66651DEE2E06E4C4003559B9 /* ShowcaseCollectionViewCell.swift in Sources */,
