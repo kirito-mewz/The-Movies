@@ -32,6 +32,10 @@
 		66651DE52E06E24E003559B9 /* UITableViewCell+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66651DE12E06E24E003559B9 /* UITableViewCell+Extensions.swift */; };
 		66651DE82E06E252003559B9 /* GenreVO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66651DE62E06E252003559B9 /* GenreVO.swift */; };
 		66651DEB2E06E255003559B9 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66651DE92E06E255003559B9 /* HomeViewController.swift */; };
+		66651DEE2E06E4C4003559B9 /* ShowcaseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66651DEC2E06E4C4003559B9 /* ShowcaseCollectionViewCell.swift */; };
+		66651DEF2E06E4C4003559B9 /* ShowcaseCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 66651DED2E06E4C4003559B9 /* ShowcaseCollectionViewCell.xib */; };
+		66651DF22E06E75C003559B9 /* ShowcaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66651DF02E06E75C003559B9 /* ShowcaseTableViewCell.swift */; };
+		66651DF32E06E75C003559B9 /* ShowcaseTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 66651DF12E06E75C003559B9 /* ShowcaseTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +66,10 @@
 		66651DE12E06E24E003559B9 /* UITableViewCell+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Extensions.swift"; sourceTree = "<group>"; };
 		66651DE62E06E252003559B9 /* GenreVO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenreVO.swift; sourceTree = "<group>"; };
 		66651DE92E06E255003559B9 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		66651DEC2E06E4C4003559B9 /* ShowcaseCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowcaseCollectionViewCell.swift; sourceTree = "<group>"; };
+		66651DED2E06E4C4003559B9 /* ShowcaseCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShowcaseCollectionViewCell.xib; sourceTree = "<group>"; };
+		66651DF02E06E75C003559B9 /* ShowcaseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowcaseTableViewCell.swift; sourceTree = "<group>"; };
+		66651DF12E06E75C003559B9 /* ShowcaseTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShowcaseTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,6 +172,7 @@
 				66651DAB2E06DC51003559B9 /* MovieSliderCollectionViewCell.swift */,
 				66651DAA2E06DC51003559B9 /* MovieListCollectionViewCell.swift */,
 				66651DA92E06DC51003559B9 /* GenreCollectionViewCell.swift */,
+				66651DEC2E06E4C4003559B9 /* ShowcaseCollectionViewCell.swift */,
 			);
 			path = swift;
 			sourceTree = "<group>";
@@ -174,6 +183,7 @@
 				66651DAF2E06DC51003559B9 /* MovieSliderCollectionViewCell.xib */,
 				66651DAE2E06DC51003559B9 /* MovieListCollectionViewCell.xib */,
 				66651DAD2E06DC51003559B9 /* GenreCollectionViewCell.xib */,
+				66651DED2E06E4C4003559B9 /* ShowcaseCollectionViewCell.xib */,
 			);
 			path = xib;
 			sourceTree = "<group>";
@@ -194,6 +204,7 @@
 				66651DBB2E06DC59003559B9 /* PopularMoviesTableViewCell.swift */,
 				66651DB82E06DC59003559B9 /* CheckShowtimeTableViewCell.swift */,
 				66651DBA2E06DC59003559B9 /* MovieWithGenreTableViewCell.swift */,
+				66651DF02E06E75C003559B9 /* ShowcaseTableViewCell.swift */,
 			);
 			path = swift;
 			sourceTree = "<group>";
@@ -205,6 +216,7 @@
 				66651DC02E06DC59003559B9 /* PopularMoviesTableViewCell.xib */,
 				66651DBD2E06DC59003559B9 /* CheckShowtimeTableViewCell.xib */,
 				66651DBF2E06DC59003559B9 /* MovieWithGenreTableViewCell.xib */,
+				66651DF12E06E75C003559B9 /* ShowcaseTableViewCell.xib */,
 			);
 			path = xib;
 			sourceTree = "<group>";
@@ -311,7 +323,9 @@
 				66651DC72E06DC59003559B9 /* CheckShowtimeTableViewCell.xib in Resources */,
 				66651DC82E06DC59003559B9 /* MovieSliderTableViewCell.xib in Resources */,
 				66651DC92E06DC59003559B9 /* MovieWithGenreTableViewCell.xib in Resources */,
+				66651DF32E06E75C003559B9 /* ShowcaseTableViewCell.xib in Resources */,
 				66651DCA2E06DC59003559B9 /* PopularMoviesTableViewCell.xib in Resources */,
+				66651DEF2E06E4C4003559B9 /* ShowcaseCollectionViewCell.xib in Resources */,
 				66651D522E059497003559B9 /* Assets.xcassets in Resources */,
 				66651D532E059497003559B9 /* LaunchScreen.storyboard in Resources */,
 				66651D542E059497003559B9 /* Main.storyboard in Resources */,
@@ -330,6 +344,7 @@
 				66651D7E2E06A46E003559B9 /* RatingControl.swift in Sources */,
 				66651DC32E06DC59003559B9 /* CheckShowtimeTableViewCell.swift in Sources */,
 				66651DC42E06DC59003559B9 /* MovieSliderTableViewCell.swift in Sources */,
+				66651DF22E06E75C003559B9 /* ShowcaseTableViewCell.swift in Sources */,
 				66651DEB2E06E255003559B9 /* HomeViewController.swift in Sources */,
 				66651DC52E06DC59003559B9 /* MovieWithGenreTableViewCell.swift in Sources */,
 				66651DC62E06DC59003559B9 /* PopularMoviesTableViewCell.swift in Sources */,
@@ -339,6 +354,7 @@
 				66651DE52E06E24E003559B9 /* UITableViewCell+Extensions.swift in Sources */,
 				66651DB22E06DC51003559B9 /* GenreCollectionViewCell.swift in Sources */,
 				66651DB32E06DC51003559B9 /* MovieListCollectionViewCell.swift in Sources */,
+				66651DEE2E06E4C4003559B9 /* ShowcaseCollectionViewCell.swift in Sources */,
 				66651DB42E06DC51003559B9 /* MovieSliderCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

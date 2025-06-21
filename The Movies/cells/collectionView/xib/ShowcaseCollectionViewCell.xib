@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23727" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23721"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="ShowcaseCollectionViewCell" customModule="The_Movies" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="280" height="175"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="280" height="175"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ocz-Ao-rxX" userLabel="Content View">
+                        <rect key="frame" x="0.0" y="0.0" width="280" height="175"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="showcase_2" translatesAutoresizingMaskIntoConstraints="NO" id="N2y-U7-Mcp" userLabel="Movie Image View">
+                                <rect key="frame" x="0.0" y="0.0" width="280" height="175"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TZk-B8-cts" userLabel="Overlay View">
+                                <rect key="frame" x="0.0" y="0.0" width="280" height="175"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="play.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="woC-yc-gEU" userLabel="Play Image View">
+                                        <rect key="frame" x="120" y="68.333333333333343" width="40" height="38.666666666666657"/>
+                                        <color key="tintColor" name="Color_Yellow"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="40" id="7B4-G6-2g4"/>
+                                            <constraint firstAttribute="height" constant="40" id="o3O-2u-mEJ"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1917" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cyg-fw-wNd" userLabel="Movie Title Label">
+                                        <rect key="frame" x="12" y="116.66666666666669" width="45" height="25"/>
+                                        <fontDescription key="fontDescription" name="GeezaPro-Bold" family="Geeza Pro" pointSize="20"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="15 December, 2019" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oae-Xx-xkc" userLabel="Show Date Label">
+                                        <rect key="frame" x="12" y="145.66666666666666" width="124" height="17.333333333333343"/>
+                                        <fontDescription key="fontDescription" name="GeezaPro" family="Geeza Pro" pointSize="14"/>
+                                        <color key="textColor" systemColor="systemGray4Color"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="Oae-Xx-xkc" firstAttribute="leading" secondItem="TZk-B8-cts" secondAttribute="leading" constant="12" id="GZx-iC-PTS"/>
+                                    <constraint firstItem="Oae-Xx-xkc" firstAttribute="top" secondItem="cyg-fw-wNd" secondAttribute="bottom" constant="4" id="H1p-6D-M5X"/>
+                                    <constraint firstItem="woC-yc-gEU" firstAttribute="centerY" secondItem="TZk-B8-cts" secondAttribute="centerY" id="I62-CA-BzS"/>
+                                    <constraint firstItem="cyg-fw-wNd" firstAttribute="leading" secondItem="TZk-B8-cts" secondAttribute="leading" constant="12" id="YcN-WN-f7q"/>
+                                    <constraint firstAttribute="bottom" secondItem="Oae-Xx-xkc" secondAttribute="bottom" constant="12" id="Yck-mk-JG0"/>
+                                    <constraint firstItem="woC-yc-gEU" firstAttribute="centerX" secondItem="TZk-B8-cts" secondAttribute="centerX" id="tcx-9Y-O7y"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="TZk-B8-cts" secondAttribute="trailing" id="63I-Qe-EG3"/>
+                            <constraint firstAttribute="bottom" secondItem="TZk-B8-cts" secondAttribute="bottom" id="BiO-CK-9xe"/>
+                            <constraint firstItem="N2y-U7-Mcp" firstAttribute="leading" secondItem="Ocz-Ao-rxX" secondAttribute="leading" id="GHf-S2-emE"/>
+                            <constraint firstItem="TZk-B8-cts" firstAttribute="leading" secondItem="Ocz-Ao-rxX" secondAttribute="leading" id="LaF-Uu-LzT"/>
+                            <constraint firstAttribute="trailing" secondItem="N2y-U7-Mcp" secondAttribute="trailing" id="Vel-yw-N21"/>
+                            <constraint firstAttribute="bottom" secondItem="N2y-U7-Mcp" secondAttribute="bottom" id="Zc9-Se-iRy"/>
+                            <constraint firstItem="N2y-U7-Mcp" firstAttribute="top" secondItem="Ocz-Ao-rxX" secondAttribute="top" id="c5G-Rx-KMf"/>
+                            <constraint firstItem="TZk-B8-cts" firstAttribute="top" secondItem="Ocz-Ao-rxX" secondAttribute="top" id="zls-9r-KpZ"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="Ocz-Ao-rxX" secondAttribute="bottom" id="267-gG-ftc"/>
+                <constraint firstItem="Ocz-Ao-rxX" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="fjS-JI-Smb"/>
+                <constraint firstAttribute="trailing" secondItem="Ocz-Ao-rxX" secondAttribute="trailing" id="x0m-rF-XLS"/>
+                <constraint firstItem="Ocz-Ao-rxX" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="xKq-R4-53r"/>
+            </constraints>
+            <connections>
+                <outlet property="containerView" destination="Ocz-Ao-rxX" id="p1l-Xh-zAz"/>
+                <outlet property="movieImageView" destination="N2y-U7-Mcp" id="WBV-uI-kbd"/>
+                <outlet property="movieTitleLabel" destination="cyg-fw-wNd" id="39Y-4D-do6"/>
+                <outlet property="playImageView" destination="woC-yc-gEU" id="SqE-WC-9Yq"/>
+                <outlet property="showDateLabel" destination="Oae-Xx-xkc" id="D9Q-CS-efU"/>
+            </connections>
+            <point key="canvasLocation" x="64" y="21"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="play.circle.fill" catalog="system" width="128" height="123"/>
+        <image name="showcase_2" width="236.66667175292969" height="148"/>
+        <namedColor name="Color_Yellow">
+            <color red="0.9100000262260437" green="0.64300000667572021" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray4Color">
+            <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
