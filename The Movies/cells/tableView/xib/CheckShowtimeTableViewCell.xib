@@ -55,8 +55,8 @@
                             <constraint firstAttribute="trailing" secondItem="mat-eV-lv9" secondAttribute="trailing" constant="-50" id="GAi-Cf-eNv"/>
                             <constraint firstItem="vy2-jh-B8d" firstAttribute="leading" secondItem="SHX-ZM-8so" secondAttribute="leading" constant="14" id="H1z-DI-7ph"/>
                             <constraint firstItem="vy2-jh-B8d" firstAttribute="top" secondItem="SHX-ZM-8so" secondAttribute="top" constant="16" id="M36-UL-Bxa"/>
-                            <constraint firstAttribute="height" constant="160" id="QIN-Fh-adh"/>
                             <constraint firstAttribute="bottom" secondItem="Up0-Xc-YHn" secondAttribute="bottom" constant="16" id="ZXL-Cz-byh"/>
+                            <constraint firstAttribute="height" constant="160" id="aan-0f-hja"/>
                             <constraint firstItem="mat-eV-lv9" firstAttribute="top" secondItem="SHX-ZM-8so" secondAttribute="top" id="abO-Vs-a8X"/>
                             <constraint firstItem="vy2-jh-B8d" firstAttribute="width" secondItem="SHX-ZM-8so" secondAttribute="width" multiplier="0.5" id="c8q-dy-f5y"/>
                             <constraint firstItem="gsh-qc-5vy" firstAttribute="centerX" secondItem="mat-eV-lv9" secondAttribute="centerX" id="g20-aY-ZlU"/>
@@ -67,10 +67,10 @@
                 </subviews>
                 <color key="backgroundColor" name="Color_Primary"/>
                 <constraints>
-                    <constraint firstAttribute="trailing" secondItem="SHX-ZM-8so" secondAttribute="trailing" constant="20" id="3Lz-Nc-3Wx"/>
-                    <constraint firstItem="SHX-ZM-8so" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="CMd-PO-RvR"/>
-                    <constraint firstItem="SHX-ZM-8so" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="20" id="Dv9-id-KRt"/>
-                    <constraint firstAttribute="bottom" secondItem="SHX-ZM-8so" secondAttribute="bottom" constant="20" id="kZn-va-9lW"/>
+                    <constraint firstItem="SHX-ZM-8so" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="20" id="6Qg-1a-9hs"/>
+                    <constraint firstAttribute="bottom" secondItem="SHX-ZM-8so" secondAttribute="bottom" constant="20" id="Vhe-JO-g0U"/>
+                    <constraint firstAttribute="trailing" secondItem="SHX-ZM-8so" secondAttribute="trailing" constant="20" id="YcP-wP-xga"/>
+                    <constraint firstItem="SHX-ZM-8so" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="mqf-JE-DaY"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>

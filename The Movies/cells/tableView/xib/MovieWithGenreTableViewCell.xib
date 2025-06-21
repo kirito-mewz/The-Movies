@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23727" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23721"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="345" id="KGk-i7-Jjw" customClass="MovieWithGenreTableViewCell" customModule="The_Movies" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="445" height="345"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="445" height="345"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="ddf-cV-oAe" userLabel="Genre Collection View">
+                        <rect key="frame" x="0.0" y="0.0" width="445" height="50"/>
+                        <color key="backgroundColor" name="Color_Primary"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="50" id="jUr-2M-hSx"/>
+                        </constraints>
+                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="0Gf-Hg-3FL">
+                            <size key="itemSize" width="128" height="128"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="20" minY="10" maxX="20" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                    </collectionView>
+                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="VX3-zQ-yaK" userLabel="Movie Collection View">
+                        <rect key="frame" x="0.0" y="70" width="445" height="250"/>
+                        <color key="backgroundColor" name="Color_Dark_Blue"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="250" id="3df-Pf-Fby"/>
+                        </constraints>
+                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="20" minimumInteritemSpacing="0.0" id="hk1-MV-gUd">
+                            <size key="itemSize" width="128" height="128"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="20" minY="0.0" maxX="20" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                    </collectionView>
+                </subviews>
+                <color key="backgroundColor" name="Color_Dark_Blue"/>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="VX3-zQ-yaK" secondAttribute="trailing" id="61I-2Y-20p"/>
+                    <constraint firstItem="VX3-zQ-yaK" firstAttribute="top" secondItem="ddf-cV-oAe" secondAttribute="bottom" constant="20" id="A8g-gE-E9G"/>
+                    <constraint firstAttribute="bottom" secondItem="VX3-zQ-yaK" secondAttribute="bottom" constant="20" id="Awl-vy-EdT"/>
+                    <constraint firstItem="ddf-cV-oAe" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="H4u-Ki-3PH"/>
+                    <constraint firstAttribute="trailing" secondItem="ddf-cV-oAe" secondAttribute="trailing" id="IM2-LG-RwC"/>
+                    <constraint firstItem="ddf-cV-oAe" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="W2G-qH-8JQ"/>
+                    <constraint firstItem="VX3-zQ-yaK" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="yyV-BS-EZZ"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="genreCollectionView" destination="ddf-cV-oAe" id="xuo-4b-H4f"/>
+                <outlet property="movieCollectionView" destination="VX3-zQ-yaK" id="rDx-zB-fvz"/>
+            </connections>
+            <point key="canvasLocation" x="64" y="21"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <namedColor name="Color_Dark_Blue">
+            <color red="0.082000002264976501" green="0.10700000077486038" blue="0.14000000059604645" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Color_Primary">
+            <color red="0.10000000149011612" green="0.12999999523162842" blue="0.1809999942779541" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
