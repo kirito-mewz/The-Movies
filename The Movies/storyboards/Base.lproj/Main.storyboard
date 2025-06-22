@@ -87,7 +87,7 @@
         <!--Movie Detail View Controller-->
         <scene sceneID="OhC-m1-tFX">
             <objects>
-                <viewController id="Jvc-kx-tll" customClass="MovieDetailViewController" customModule="The_Movies" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MovieDetailViewController" id="Jvc-kx-tll" customClass="MovieDetailViewController" customModule="The_Movies" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bNX-XD-mNI">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="1400"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

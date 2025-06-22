@@ -12,6 +12,8 @@ class ShowcaseTableViewCell: UITableViewCell {
     @IBOutlet var moreShowcaseLabel: UILabel!
     @IBOutlet var showcaseCollectionView: UICollectionView!
     
+    var delegate: MovieItemDelegate?
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         
@@ -39,6 +41,10 @@ extension ShowcaseTableViewCell: UICollectionViewDataSource, UICollectionViewDel
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         return dequeueCollectionViewCell(ofType: ShowcaseCollectionViewCell.self, with: collectionView, for: indexPath)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        delegate?.onItemTap()
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {

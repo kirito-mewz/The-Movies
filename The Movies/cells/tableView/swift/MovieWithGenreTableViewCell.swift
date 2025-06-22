@@ -22,6 +22,8 @@ class MovieWithGenreTableViewCell: UITableViewCell {
         .init(genreName: "BIOGRAPHY", isSelected: false)
     ]
     
+    var delegate: MovieItemDelegate?
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         
@@ -65,6 +67,10 @@ extension MovieWithGenreTableViewCell: UICollectionViewDataSource, UICollectionV
             return dequeueCollectionViewCell(ofType: MovieListCollectionViewCell.self, with: collectionView, for: indexPath)
         }
         
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        delegate?.onItemTap()
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {

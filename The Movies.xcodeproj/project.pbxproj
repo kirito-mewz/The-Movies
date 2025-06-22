@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6639F9852E084388004AC7FA /* Storyboarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6639F9842E084388004AC7FA /* Storyboarded.swift */; };
 		66651D4F2E059497003559B9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66651D3F2E059497003559B9 /* AppDelegate.swift */; };
 		66651D502E059497003559B9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66651D402E059497003559B9 /* SceneDelegate.swift */; };
 		66651D522E059497003559B9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66651D422E059497003559B9 /* Assets.xcassets */; };
@@ -44,6 +45,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6639F9842E084388004AC7FA /* Storyboarded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboarded.swift; sourceTree = "<group>"; };
 		66651D1C2E057AA2003559B9 /* The Movies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "The Movies.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		66651D3F2E059497003559B9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		66651D402E059497003559B9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -165,6 +167,7 @@
 			isa = PBXGroup;
 			children = (
 				66651DE22E06E24E003559B9 /* extensions */,
+				6639F9842E084388004AC7FA /* Storyboarded.swift */,
 			);
 			path = utilities;
 			sourceTree = "<group>";
@@ -380,6 +383,7 @@
 				66651DC52E06DC59003559B9 /* MovieWithGenreTableViewCell.swift in Sources */,
 				66651DC62E06DC59003559B9 /* PopularMoviesTableViewCell.swift in Sources */,
 				66651DE32E06E24E003559B9 /* UICollectionViewCell+Extensions.swift in Sources */,
+				6639F9852E084388004AC7FA /* Storyboarded.swift in Sources */,
 				66651DE82E06E252003559B9 /* GenreVO.swift in Sources */,
 				66651DE42E06E24E003559B9 /* UILabel+Extensions.swift in Sources */,
 				66651DE52E06E24E003559B9 /* UITableViewCell+Extensions.swift in Sources */,

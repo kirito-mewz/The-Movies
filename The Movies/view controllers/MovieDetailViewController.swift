@@ -7,8 +7,7 @@
 
 import UIKit
 
-class MovieDetailViewController: UIViewController {
-    
+class MovieDetailViewController: UIViewController, Storyboarded {
     
     @IBOutlet var backwardButton: UIButton!
     @IBOutlet var searchButton: UIImageView!

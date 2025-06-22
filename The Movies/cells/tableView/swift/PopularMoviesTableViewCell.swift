@@ -11,6 +11,8 @@ class PopularMoviesTableViewCell: UITableViewCell {
     
     @IBOutlet var popularMoviesCollectionView: UICollectionView!
     
+    var delegate: MovieItemDelegate?
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         
@@ -36,6 +38,10 @@ extension PopularMoviesTableViewCell: UICollectionViewDataSource, UICollectionVi
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         return dequeueCollectionViewCell(ofType: MovieListCollectionViewCell.self, with: collectionView, for: indexPath)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        delegate?.onItemTap()
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
