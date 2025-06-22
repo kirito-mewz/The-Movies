@@ -20,8 +20,6 @@ class MovieSliderTableViewCell: UITableViewCell {
         movieSliderCollectionView.delegate = self
         movieSliderCollectionView.dataSource = self
         
-        movieSliderCollectionView.registerWithNib(MovieSliderCollectionViewCell.self)
-        
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -38,7 +36,7 @@ extension MovieSliderTableViewCell: UICollectionViewDataSource, UICollectionView
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        return dequeueCollectionViewCell(ofType: MovieSliderCollectionViewCell.self, with: collectionView, for: indexPath)
+        return collectionView.dequeueCell(ofType: MovieSliderCollectionViewCell.self, for: indexPath, shouldRegister: true)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {

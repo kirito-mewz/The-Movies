@@ -20,8 +20,6 @@ class PersonTableViewCell: UITableViewCell {
         personCollectionView.delegate = self
         personCollectionView.dataSource = self
         
-        personCollectionView.registerWithNib(PersonCollectionViewCell.self)
-        
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -38,7 +36,7 @@ extension PersonTableViewCell: UICollectionViewDataSource, UICollectionViewDeleg
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = dequeueCollectionViewCell(ofType: PersonCollectionViewCell.self, with: collectionView, for: indexPath)
+        let cell = collectionView.dequeueCell(ofType: PersonCollectionViewCell.self, for: indexPath, shouldRegister: true)
         cell.personActionDelegate = self
         return cell
     }

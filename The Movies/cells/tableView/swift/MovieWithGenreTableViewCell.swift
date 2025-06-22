@@ -33,8 +33,6 @@ class MovieWithGenreTableViewCell: UITableViewCell {
         movieCollectionView.delegate = self
         movieCollectionView.dataSource = self
         
-        genreCollectionView.registerWithNib(GenreCollectionViewCell.self)
-        movieCollectionView.registerWithNib(MovieListCollectionViewCell.self)
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -53,18 +51,19 @@ extension MovieWithGenreTableViewCell: UICollectionViewDataSource, UICollectionV
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         if collectionView == genreCollectionView {
-            return dequeueCollectionViewCell(ofType: GenreCollectionViewCell.self, with: collectionView, for: indexPath) { cell in
+            return collectionView.dequeueCell(ofType: GenreCollectionViewCell.self, for: indexPath, shouldRegister: true){ [weak self] cell in
+                guard let self = self else { return }
                 // Pass data to the cell
-                cell.data = genreList[indexPath.row]
+                cell.data = self.genreList[indexPath.row]
                 
                 // Implement on tap event
-                cell.onGenreTap = { [self] genreName in
-                    resetGenreSelected(genreName)
-                    genreCollectionView.reloadData()
+                cell.onGenreTap = { genreName in
+                    self.resetGenreSelected(genreName)
+                    self.genreCollectionView.reloadData()
                 }
             }
         } else {
-            return dequeueCollectionViewCell(ofType: MovieListCollectionViewCell.self, with: collectionView, for: indexPath)
+            return collectionView.dequeueCell(ofType: MovieListCollectionViewCell.self, for: indexPath, shouldRegister: true)
         }
         
     }

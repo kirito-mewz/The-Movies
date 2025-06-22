@@ -40,6 +40,8 @@ class MovieDetailViewController: UIViewController, Storyboarded {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setupGradient()
+        
         playTrailerButton.layer.cornerRadius = playTrailerButton.frame.height / 2
         
         rateMovieButton.layer.borderColor = UIColor.white.cgColor
@@ -51,12 +53,27 @@ class MovieDetailViewController: UIViewController, Storyboarded {
         [actorsCollectionView, creatorsCollectionView].forEach {
             $0?.delegate = self
             $0?.dataSource = self
-            $0?.registerWithNib(PersonCollectionViewCell.self)
         }
 
     }
-
+    
+    private func setupGradient() {
+        let gradientLayer = CAGradientLayer()
+        gradientLayer.colors = [UIColor.clear.cgColor, UIColor.init(named: "Color_Dark_Blue")!.cgColor]
+        gradientLayer.locations = [0, 0.9]
+        movieImageView.layer.addSublayer(gradientLayer)
+        
+        let gradientHeight = movieImageView.frame.height * 0.5
+        gradientLayer.frame = CGRect(x: 0, y: movieImageView.frame.height - gradientHeight, width: view.frame.width, height: gradientHeight)
+    }
+    
+    @IBAction func onBackTapped(_ sender: UIButton) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
 }
+
+
 
 extension MovieDetailViewController: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
@@ -65,7 +82,7 @@ extension MovieDetailViewController: UICollectionViewDataSource, UICollectionVie
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = dequeueCollectionViewCell(ofType: PersonCollectionViewCell.self, with: collectionView, for: indexPath)
+        let cell = collectionView.dequeueCell(ofType: PersonCollectionViewCell.self, for: indexPath, shouldRegister: true)
         cell.personActionDelegate = self
         return cell
     }

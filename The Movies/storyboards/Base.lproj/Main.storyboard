@@ -600,6 +600,9 @@
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" image="chevron.backward" catalog="system"/>
+                                                <connections>
+                                                    <action selector="onBackTapped:" destination="Jvc-kx-tll" eventType="touchUpInside" id="mvW-AE-dGl"/>
+                                                </connections>
                                             </button>
                                             <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="magnifyingglass" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="hFn-6Q-W5M" userLabel="Search Button">
                                                 <rect key="frame" x="339" y="41" width="30" height="28.333333333333329"/>

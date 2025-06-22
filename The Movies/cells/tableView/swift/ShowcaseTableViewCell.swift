@@ -22,8 +22,6 @@ class ShowcaseTableViewCell: UITableViewCell {
         showcaseCollectionView.delegate = self
         showcaseCollectionView.dataSource = self
         
-        showcaseCollectionView.registerWithNib(ShowcaseCollectionViewCell.self)
-        
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -40,7 +38,7 @@ extension ShowcaseTableViewCell: UICollectionViewDataSource, UICollectionViewDel
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        return dequeueCollectionViewCell(ofType: ShowcaseCollectionViewCell.self, with: collectionView, for: indexPath)
+        return collectionView.dequeueCell(ofType: ShowcaseCollectionViewCell.self, for: indexPath, shouldRegister: true)
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
