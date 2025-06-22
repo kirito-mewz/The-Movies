@@ -40,6 +40,7 @@
 		66651DFD2E06EBC0003559B9 /* PersonCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 66651DFB2E06EBC0003559B9 /* PersonCollectionViewCell.xib */; };
 		66651E002E06EBD7003559B9 /* PersonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66651DFE2E06EBD7003559B9 /* PersonTableViewCell.swift */; };
 		66651E012E06EBD7003559B9 /* PersonTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 66651DFF2E06EBD7003559B9 /* PersonTableViewCell.xib */; };
+		66651E062E06F5E0003559B9 /* MovieDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66651E052E06F5E0003559B9 /* MovieDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -78,6 +79,7 @@
 		66651DFB2E06EBC0003559B9 /* PersonCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PersonCollectionViewCell.xib; sourceTree = "<group>"; };
 		66651DFE2E06EBD7003559B9 /* PersonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonTableViewCell.swift; sourceTree = "<group>"; };
 		66651DFF2E06EBD7003559B9 /* PersonTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PersonTableViewCell.xib; sourceTree = "<group>"; };
+		66651E052E06F5E0003559B9 /* MovieDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -273,6 +275,7 @@
 			isa = PBXGroup;
 			children = (
 				66651DE92E06E255003559B9 /* HomeViewController.swift */,
+				66651E052E06F5E0003559B9 /* MovieDetailViewController.swift */,
 			);
 			path = "view controllers";
 			sourceTree = "<group>";
@@ -369,6 +372,7 @@
 				66651D4F2E059497003559B9 /* AppDelegate.swift in Sources */,
 				66651D502E059497003559B9 /* SceneDelegate.swift in Sources */,
 				66651D7E2E06A46E003559B9 /* RatingControl.swift in Sources */,
+				66651E062E06F5E0003559B9 /* MovieDetailViewController.swift in Sources */,
 				66651DC32E06DC59003559B9 /* CheckShowtimeTableViewCell.swift in Sources */,
 				66651DC42E06DC59003559B9 /* MovieSliderTableViewCell.swift in Sources */,
 				66651DF22E06E75C003559B9 /* ShowcaseTableViewCell.swift in Sources */,
