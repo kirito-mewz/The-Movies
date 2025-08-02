@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23727" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23721"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="GenreBadgeCollectionViewCell" customModule="The_Movies" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="365" height="50"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="365" height="50"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NBM-oe-Ajd" userLabel="Placeholder View">
+                        <rect key="frame" x="0.0" y="0.0" width="365" height="50"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Genre" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i20-6m-9Ll" userLabel="Genre Label">
+                                <rect key="frame" x="161.66666666666666" y="15.666666666666664" width="42" height="19"/>
+                                <fontDescription key="fontDescription" name="GeezaPro" family="Geeza Pro" pointSize="15"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" name="Color_Bluish_Gray"/>
+                        <constraints>
+                            <constraint firstItem="i20-6m-9Ll" firstAttribute="centerY" secondItem="NBM-oe-Ajd" secondAttribute="centerY" id="7SB-A9-OLl"/>
+                            <constraint firstItem="i20-6m-9Ll" firstAttribute="centerX" secondItem="NBM-oe-Ajd" secondAttribute="centerX" id="AUB-Tz-jJ0"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="NBM-oe-Ajd" secondAttribute="bottom" id="2ks-og-inO"/>
+                <constraint firstItem="NBM-oe-Ajd" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="HCy-ws-YE1"/>
+                <constraint firstItem="NBM-oe-Ajd" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="elH-MQ-xXf"/>
+                <constraint firstAttribute="trailing" secondItem="NBM-oe-Ajd" secondAttribute="trailing" id="sIv-JS-gxt"/>
+            </constraints>
+            <connections>
+                <outlet property="genreLabel" destination="i20-6m-9Ll" id="IsE-mG-TR6"/>
+                <outlet property="placeholderView" destination="NBM-oe-Ajd" id="l7p-V6-3Sg"/>
+            </connections>
+            <point key="canvasLocation" x="131" y="21"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <namedColor name="Color_Bluish_Gray">
+            <color red="0.34400001168251038" green="0.375" blue="0.43799999356269836" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

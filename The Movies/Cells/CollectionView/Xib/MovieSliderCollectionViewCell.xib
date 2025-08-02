@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23727" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23721"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="MovieSliderCollectionViewCell" customModule="The_Movies" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="440" height="290"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="440" height="290"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="opd-Zq-Dx4" userLabel="Placeholder View">
+                        <rect key="frame" x="0.0" y="0.0" width="440" height="290"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="MxU-dQ-DH0" userLabel="Movie Image View">
+                                <rect key="frame" x="0.0" y="0.0" width="440" height="290"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="play.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="giU-tW-Htc" userLabel="Play Image View">
+                                <rect key="frame" x="187.66666666666666" y="113.33333333333336" width="65" height="63.666666666666671"/>
+                                <color key="tintColor" name="Color_Yellow"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="65" id="GoY-Ia-ePN"/>
+                                    <constraint firstAttribute="width" constant="65" id="fVm-Cl-eUn"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Movie Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v86-l4-8Op" userLabel="Movie Title Label">
+                                <rect key="frame" x="20" y="251.66666666666666" width="400" height="28.333333333333343"/>
+                                <fontDescription key="fontDescription" name="GeezaPro-Bold" family="Geeza Pro" pointSize="23"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="MxU-dQ-DH0" secondAttribute="trailing" id="BPd-Pj-ZT3"/>
+                            <constraint firstAttribute="bottom" secondItem="MxU-dQ-DH0" secondAttribute="bottom" id="EaB-r5-MXl"/>
+                            <constraint firstItem="giU-tW-Htc" firstAttribute="centerY" secondItem="opd-Zq-Dx4" secondAttribute="centerY" id="L6f-tg-BWJ"/>
+                            <constraint firstItem="giU-tW-Htc" firstAttribute="centerX" secondItem="opd-Zq-Dx4" secondAttribute="centerX" id="SUn-7e-1KI"/>
+                            <constraint firstItem="MxU-dQ-DH0" firstAttribute="top" secondItem="opd-Zq-Dx4" secondAttribute="top" id="ZOd-wa-eQ0"/>
+                            <constraint firstItem="v86-l4-8Op" firstAttribute="leading" secondItem="opd-Zq-Dx4" secondAttribute="leading" constant="20" id="dqh-3P-Ebd"/>
+                            <constraint firstItem="MxU-dQ-DH0" firstAttribute="leading" secondItem="opd-Zq-Dx4" secondAttribute="leading" id="l4O-fw-iTr"/>
+                            <constraint firstAttribute="trailing" secondItem="v86-l4-8Op" secondAttribute="trailing" constant="20" id="q5c-el-vIX"/>
+                            <constraint firstAttribute="bottom" secondItem="v86-l4-8Op" secondAttribute="bottom" constant="10" id="qY1-4i-VUY"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="opd-Zq-Dx4" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="6to-R2-gmH"/>
+                <constraint firstAttribute="bottom" secondItem="opd-Zq-Dx4" secondAttribute="bottom" id="8N0-or-LKo"/>
+                <constraint firstItem="opd-Zq-Dx4" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="BeI-iZ-xrW"/>
+                <constraint firstAttribute="trailing" secondItem="opd-Zq-Dx4" secondAttribute="trailing" id="NEf-dA-Q8q"/>
+            </constraints>
+            <connections>
+                <outlet property="movieImageView" destination="MxU-dQ-DH0" id="Uhl-El-MOV"/>
+                <outlet property="movieTitleLabel" destination="v86-l4-8Op" id="jGJ-Cm-Jr9"/>
+                <outlet property="playImageView" destination="giU-tW-Htc" id="DSt-sZ-mlg"/>
+            </connections>
+            <point key="canvasLocation" x="140" y="21"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="play.circle.fill" catalog="system" width="128" height="123"/>
+        <namedColor name="Color_Yellow">
+            <color red="0.9100000262260437" green="0.64300000667572021" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

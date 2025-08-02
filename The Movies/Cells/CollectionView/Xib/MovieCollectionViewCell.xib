@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23727" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23721"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="MovieCollectionViewCell" customModule="The_Movies" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="235" height="335"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="235" height="335"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QEP-LH-EMG" userLabel="Placeholder View">
+                        <rect key="frame" x="0.0" y="0.0" width="235" height="335"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6tA-eu-pCQ" userLabel="Movie Image View">
+                                <rect key="frame" x="0.0" y="0.0" width="235" height="276"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Movie Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dfY-XI-btf" userLabel="Movie Title Label">
+                                <rect key="frame" x="0.0" y="290" width="235" height="23"/>
+                                <fontDescription key="fontDescription" name="GeezaPro" family="Geeza Pro" pointSize="18"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DCi-AV-i06" userLabel="Rating Label">
+                                <rect key="frame" x="0.0" y="315" width="32" height="20"/>
+                                <fontDescription key="fontDescription" name="GeezaPro-Bold" family="Geeza Pro" pointSize="16"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fn7-kf-r8m" userLabel="Rating Control View" customClass="RatingControl" customModule="The_Movies" customModuleProvider="target">
+                                <rect key="frame" x="40" y="317" width="80" height="16"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="mHY-Ng-IEf"/>
+                                    <constraint firstAttribute="height" constant="16" id="qH1-zb-IZT"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="starCount">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="size" keyPath="starSize">
+                                        <size key="value" width="16" height="16"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="rating">
+                                        <integer key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="fn7-kf-r8m" firstAttribute="leading" secondItem="DCi-AV-i06" secondAttribute="trailing" constant="8" id="0on-nx-mUl"/>
+                            <constraint firstItem="fn7-kf-r8m" firstAttribute="centerY" secondItem="DCi-AV-i06" secondAttribute="centerY" id="KI6-nv-X00"/>
+                            <constraint firstItem="dfY-XI-btf" firstAttribute="top" secondItem="6tA-eu-pCQ" secondAttribute="bottom" constant="14" id="Ldo-dG-6rT"/>
+                            <constraint firstItem="dfY-XI-btf" firstAttribute="leading" secondItem="QEP-LH-EMG" secondAttribute="leading" id="NdY-e6-vjt"/>
+                            <constraint firstAttribute="trailing" secondItem="6tA-eu-pCQ" secondAttribute="trailing" id="VXx-lz-fQc"/>
+                            <constraint firstItem="fn7-kf-r8m" firstAttribute="top" secondItem="dfY-XI-btf" secondAttribute="bottom" constant="4" id="X00-33-etR"/>
+                            <constraint firstItem="DCi-AV-i06" firstAttribute="leading" secondItem="QEP-LH-EMG" secondAttribute="leading" id="bUx-ER-0fE"/>
+                            <constraint firstItem="6tA-eu-pCQ" firstAttribute="leading" secondItem="QEP-LH-EMG" secondAttribute="leading" id="ibd-Yz-dXF"/>
+                            <constraint firstItem="6tA-eu-pCQ" firstAttribute="top" secondItem="QEP-LH-EMG" secondAttribute="top" id="kGF-ur-47W"/>
+                            <constraint firstAttribute="bottom" secondItem="DCi-AV-i06" secondAttribute="bottom" id="lZU-xp-Ehd"/>
+                            <constraint firstAttribute="trailing" secondItem="dfY-XI-btf" secondAttribute="trailing" id="pzJ-ke-QGi"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="QEP-LH-EMG" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="4wA-on-ZiJ"/>
+                <constraint firstAttribute="bottom" secondItem="QEP-LH-EMG" secondAttribute="bottom" id="ZQk-dI-Tdy"/>
+                <constraint firstAttribute="trailing" secondItem="QEP-LH-EMG" secondAttribute="trailing" id="eeR-BS-J94"/>
+                <constraint firstItem="QEP-LH-EMG" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="pP2-nv-6vc"/>
+            </constraints>
+            <connections>
+                <outlet property="movieImageView" destination="6tA-eu-pCQ" id="0wX-NR-gxI"/>
+                <outlet property="movieTitleLabel" destination="dfY-XI-btf" id="OW4-Ci-w0p"/>
+                <outlet property="ratingControl" destination="fn7-kf-r8m" id="DAE-OQ-KDn"/>
+                <outlet property="ratingLabel" destination="DCi-AV-i06" id="MgU-GO-TxI"/>
+            </connections>
+            <point key="canvasLocation" x="139.69465648854961" y="20.774647887323944"/>
+        </collectionViewCell>
+    </objects>
+</document>

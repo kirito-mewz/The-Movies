@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23727" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23721"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="GenreCollectionViewCell" customModule="The_Movies" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="240" height="40"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="240" height="40"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="csC-vR-YZZ" userLabel="Placeholder View">
+                        <rect key="frame" x="0.0" y="0.0" width="240" height="40"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Genre" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l1t-Ut-wAi" userLabel="Genre Label">
+                                <rect key="frame" x="99.666666666666671" y="11" width="41.000000000000014" height="18"/>
+                                <fontDescription key="fontDescription" name="GeezaPro-Bold" family="Geeza Pro" pointSize="14"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fpV-FE-fCX" userLabel="Overlay View">
+                                <rect key="frame" x="0.0" y="36" width="240" height="4"/>
+                                <color key="backgroundColor" name="Color_Yellow"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="4" id="BBy-1l-LTL"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" name="Color_Primary"/>
+                        <constraints>
+                            <constraint firstItem="l1t-Ut-wAi" firstAttribute="centerY" secondItem="csC-vR-YZZ" secondAttribute="centerY" id="958-Va-8HF"/>
+                            <constraint firstItem="l1t-Ut-wAi" firstAttribute="centerX" secondItem="csC-vR-YZZ" secondAttribute="centerX" id="EID-dj-M6B"/>
+                            <constraint firstItem="fpV-FE-fCX" firstAttribute="leading" secondItem="csC-vR-YZZ" secondAttribute="leading" id="cUZ-lv-Znx"/>
+                            <constraint firstAttribute="trailing" secondItem="fpV-FE-fCX" secondAttribute="trailing" id="fvU-Ss-XgY"/>
+                            <constraint firstAttribute="bottom" secondItem="fpV-FE-fCX" secondAttribute="bottom" id="mxa-c3-Hj5"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="csC-vR-YZZ" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="Ezy-MF-Ipw"/>
+                <constraint firstAttribute="trailing" secondItem="csC-vR-YZZ" secondAttribute="trailing" id="Rcf-kq-1Fx"/>
+                <constraint firstAttribute="bottom" secondItem="csC-vR-YZZ" secondAttribute="bottom" id="Yd3-Ti-Yse"/>
+                <constraint firstItem="csC-vR-YZZ" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="jxd-qN-jq5"/>
+            </constraints>
+            <connections>
+                <outlet property="genreLabel" destination="l1t-Ut-wAi" id="0aX-uo-b35"/>
+                <outlet property="overlayView" destination="fpV-FE-fCX" id="kPz-el-InP"/>
+                <outlet property="placeholderView" destination="csC-vR-YZZ" id="Bis-QB-fUY"/>
+            </connections>
+            <point key="canvasLocation" x="140" y="21"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <namedColor name="Color_Primary">
+            <color red="0.10000000149011612" green="0.12999999523162842" blue="0.1809999942779541" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Color_Yellow">
+            <color red="0.9100000262260437" green="0.64300000667572021" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
