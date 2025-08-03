@@ -6,8 +6,19 @@
 //
 
 import UIKit
+import SDWebImage
 
 class MovieSliderCollectionViewCell: UICollectionViewCell {
+    
+    var movie: Movie? {
+        didSet {
+            guard let data = movie else { return }
+            if let imagePath = data.backdropPath {
+                movieImageView.sd_setImage(with: URL(string: "\(imageBaseURL)/\(imagePath)"))
+            }
+            movieTitleLabel.text = data.title
+        }
+    }
     
     @IBOutlet var movieImageView: UIImageView!
     @IBOutlet var playImageView: UIImageView!

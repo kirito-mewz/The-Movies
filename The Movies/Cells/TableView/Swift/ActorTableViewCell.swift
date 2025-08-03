@@ -9,6 +9,12 @@ import UIKit
 
 class ActorTableViewCell: UITableViewCell {
     
+    var actors: [Actor]? {
+        didSet {
+            actorCollectionView.reloadData()
+        }
+    }
+    
     @IBOutlet var moreActorsLabel: UILabel!
     @IBOutlet var actorCollectionView: UICollectionView!
     
@@ -43,12 +49,13 @@ extension ActorTableViewCell: UICollectionViewDataSource, UICollectionViewDelega
     
     // UICollectionViewDataSource
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        return actors?.count ?? 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueCell(ofType: ActorCollectionViewCell.self, for: indexPath, shouldRegister: true)
         cell.delegate = self.delegate
+        cell.actor = actors?[indexPath.row]
         return cell
     }
 
@@ -59,6 +66,6 @@ extension ActorTableViewCell: UICollectionViewDataSource, UICollectionViewDelega
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        delegate?.onActorCellTapped()
+        delegate?.onActorCellTapped(actorId: actors?[indexPath.row].id ?? 0)
     }
 }

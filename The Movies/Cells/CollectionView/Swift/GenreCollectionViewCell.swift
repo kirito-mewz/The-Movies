@@ -9,12 +9,12 @@ import UIKit
 
 class GenreCollectionViewCell: UICollectionViewCell {
     
-    var data: GenreVO? {
+    var genre: GenreVO? {
         didSet {
-            guard let genre = data else { return }
-            genreLabel.text = genre.genreName
-            overlayView.isHidden = !genre.isSelected
-            genreLabel.textColor = genre.isSelected ? .white : .init(red: 63/255, green: 69/255, blue: 96/255, alpha: 1)
+            guard let data = genre else { return }
+            genreLabel.text = data.genreName
+            overlayView.isHidden = !data.isSelected
+            genreLabel.textColor = data.isSelected ? .white : .init(red: 63/255, green: 69/255, blue: 96/255, alpha: 1)
         }
     }
     
@@ -33,7 +33,7 @@ class GenreCollectionViewCell: UICollectionViewCell {
     
     
     @objc fileprivate func _didCellTap() {
-        onGenreTap(data?.id ?? 0)
+        onGenreTap(genre?.id ?? 0)
     }
 
 }

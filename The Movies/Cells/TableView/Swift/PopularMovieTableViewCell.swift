@@ -9,8 +9,16 @@ import UIKit
 
 class PopularMovieTableViewCell: UITableViewCell {
     
+    var movies: [Movie]? {
+        didSet {
+            popularMovieCollectionView.reloadData()
+        }
+    }
+    
     @IBOutlet var sectionTitleLabel: UILabel!
     @IBOutlet var popularMovieCollectionView: UICollectionView!
+    
+    var delegate: MovieItemDelegate?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -32,11 +40,13 @@ extension PopularMovieTableViewCell: UICollectionViewDataSource, UICollectionVie
     
     // UICollectionViewDataSource
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        return movies?.count ?? 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        return collectionView.dequeueCell(ofType: MovieCollectionViewCell.self, for: indexPath, shouldRegister: true)
+        let cell = collectionView.dequeueCell(ofType: MovieCollectionViewCell.self, for: indexPath, shouldRegister: true)
+        cell.movie = movies?[indexPath.item]
+        return cell
     }
     
     // UICollectionViewDelegateFlowLayout
@@ -44,4 +54,12 @@ extension PopularMovieTableViewCell: UICollectionViewDataSource, UICollectionVie
         return .init(width: collectionView.frame.width / 3, height: collectionView.frame.height)
     }
     
+    // Delegate
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if sectionTitleLabel.text!.lowercased().contains("movies") {
+            delegate?.onMovieCellTapped(movieId: movies?[indexPath.row].id ?? 0, type: .movie)
+        } else {
+            delegate?.onMovieCellTapped(movieId: movies?[indexPath.row].id ?? 0, type: .tv)
+        }
+    }
 }

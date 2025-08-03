@@ -272,7 +272,7 @@
                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="j2i-yh-WKC">
                                                                         <rect key="frame" x="0.0" y="48" width="400" height="60"/>
                                                                         <subviews>
-                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Movie Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WFb-xB-VIR" userLabel="Title Label">
+                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Movie Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WFb-xB-VIR" userLabel="Movie Title Label">
                                                                                 <rect key="frame" x="0.0" y="8" width="400" height="44"/>
                                                                                 <fontDescription key="fontDescription" name="GeezaPro-Bold" family="Geeza Pro" pointSize="26"/>
                                                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -807,6 +807,7 @@
                         <outlet property="genresLabel" destination="FIi-m8-Fu1" id="565-ST-NUu"/>
                         <outlet property="movieDescriptionLabel" destination="6rj-d3-Jf3" id="a18-DY-2ox"/>
                         <outlet property="movieImageView" destination="Qxx-oa-waN" id="enh-Ju-PYM"/>
+                        <outlet property="movieTitleLabel" destination="WFb-xB-VIR" id="93H-uO-q0f"/>
                         <outlet property="originalTitleLabel" destination="Wwg-rz-PWw" id="ktK-aP-zIK"/>
                         <outlet property="playTrailerButton" destination="Kpf-Bl-uMu" id="vcJ-YJ-tOC"/>
                         <outlet property="popularityLabel" destination="TAY-p5-pvd" id="zhE-ae-wl2"/>
@@ -816,7 +817,6 @@
                         <outlet property="releaseYearLabel" destination="QSb-Ng-9Ky" id="1bq-lL-r2O"/>
                         <outlet property="similarMoviesCollectionView" destination="6dF-45-9Ya" id="01h-a0-GE1"/>
                         <outlet property="storylineLabel" destination="7j6-y1-uSq" id="Pci-m9-nc2"/>
-                        <outlet property="titleLabel" destination="WFb-xB-VIR" id="kFS-dh-6dC"/>
                         <outlet property="voteCountLabel" destination="Bbg-ba-Rvy" id="nEc-CA-Abf"/>
                     </connections>
                 </viewController>
@@ -1149,10 +1149,11 @@
                     <connections>
                         <outlet property="biographyLabel" destination="F9J-mL-y5O" id="VH2-nY-HpW"/>
                         <outlet property="detailAkaLabel" destination="1bz-Md-fmb" id="yOi-my-Kwn"/>
-                        <outlet property="detailBirthPlace" destination="SLe-yg-98o" id="Vx8-oZ-4WX"/>
+                        <outlet property="detailBirthPlaceLabel" destination="SLe-yg-98o" id="bYx-Tx-DTR"/>
                         <outlet property="detailBirthdayLabel" destination="ROQ-iH-NX3" id="8QI-Ab-3Ux"/>
                         <outlet property="detailNameLabel" destination="2GP-OH-F6w" id="QoY-6s-Ahx"/>
                         <outlet property="detailRoleLabel" destination="Fv1-yt-Ff9" id="AcX-db-mHL"/>
+                        <outlet property="imageHeightConstraint" destination="rSo-Fh-T7p" id="Mf7-1m-TCo"/>
                         <outlet property="knownForCollectionView" destination="6iW-Jt-qnN" id="03h-Ut-PaP"/>
                         <outlet property="nameLabel" destination="yCi-pG-c1T" id="viJ-k5-lFQ"/>
                         <outlet property="popularityLabel" destination="hHN-HJ-YaN" id="gXw-Wo-mvv"/>
@@ -1172,7 +1173,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="440" height="956"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="j3b-8p-p0a" userLabel="Youtube Player View">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="j3b-8p-p0a" userLabel="Youtube Player View" customClass="YoutubePlayerView" customModule="YoutubePlayerView">
                                 <rect key="frame" x="0.0" y="353" width="440" height="250"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -1190,7 +1191,7 @@
                     </view>
                     <connections>
                         <outlet property="heightConstraint" destination="xNc-X2-fUH" id="gd9-jq-J4e"/>
-                        <outlet property="youtubePlayerView" destination="j3b-8p-p0a" id="kpP-hH-pQI"/>
+                        <outlet property="youtubePlayerView" destination="j3b-8p-p0a" id="U45-OA-mw7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VD7-Jb-1ZP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1206,6 +1207,7 @@
                         <rect key="frame" x="0.0" y="124" width="440" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" name="Color_Yellow"/>
                         <color key="barTintColor" name="Color_Primary"/>
                         <textAttributes key="titleTextAttributes">
                             <color key="textColor" name="Color_Yellow"/>
@@ -1267,10 +1269,10 @@
             <color red="0.9100000262260437" green="0.64300000667572021" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="opaqueSeparatorColor">
-            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGrayColor">
-            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

@@ -9,6 +9,13 @@ import UIKit
 
 class GenreBadgeCollectionViewCell: UICollectionViewCell {
     
+    var genre: Genre? {
+        didSet {
+            guard let data = genre else { return }
+            genreLabel.text = data.name
+        }
+    }
+    
     @IBOutlet var placeholderView: UIView!
     @IBOutlet var genreLabel: UILabel!
     

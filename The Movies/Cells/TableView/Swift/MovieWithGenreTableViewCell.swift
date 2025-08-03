@@ -9,18 +9,28 @@ import UIKit
 
 class MovieWithGenreTableViewCell: UITableViewCell {
     
+    var genres: [GenreVO]? {
+        didSet {
+            genres?.first?.isSelected = true
+            genreCollectionView.reloadData()
+            
+            reloadMovies(basedOn: genres?.first?.id ?? 0)
+        }
+    }
+    
+    var movies: [Movie]? {
+        didSet {
+            guard let data = movies else { return }
+            organizeMoviesBasedOnGenre(data)
+        }
+    }
+    
     @IBOutlet var genreCollectionView: UICollectionView!
     @IBOutlet var movieCollectionView: UICollectionView!
     
-    fileprivate var genreList: [GenreVO] = [
-        .init(id: 1, genreName: "ACTION", isSelected: true),
-        .init(id: 2, genreName: "ADVENTURE", isSelected: false),
-        .init(id: 3, genreName: "CRIMINAL", isSelected: false),
-        .init(id: 4, genreName: "DRAMMA", isSelected: false),
-        .init(id: 5, genreName: "COMEDY", isSelected: false),
-        .init(id: 6, genreName: "DOCUMENTARY", isSelected: false),
-        .init(id: 7, genreName: "BIOGRAPHY", isSelected: false)
-    ]
+    private var movieDict: [Int: Set<Movie>] = [:]
+    
+    var delegate: MovieItemDelegate?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -46,9 +56,9 @@ extension MovieWithGenreTableViewCell: UICollectionViewDataSource, UICollectionV
     // UICollectionViewDataSource
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if collectionView == genreCollectionView {
-            return genreList.count
+            return genres?.count ?? 0
         } else {
-            return 10
+            return movies?.count ?? 0
         }
     }
     
@@ -57,37 +67,67 @@ extension MovieWithGenreTableViewCell: UICollectionViewDataSource, UICollectionV
             return collectionView.dequeueCell(ofType: GenreCollectionViewCell.self, for: indexPath, shouldRegister: true) { [weak self] cell in
                 guard let self = self else { return }
                 // Pass data to the cell
-                cell.data = self.genreList[indexPath.item]
+                cell.genre = genres?[indexPath.row]
                 // Implement on tap event
                 cell.onGenreTap = { genreId in
                     self.resetGenreSection(genreId)
-                    self.genreCollectionView.reloadData()
+                    self.reloadMovies(basedOn: genreId)
                 }
             }
         } else {
-            return collectionView.dequeueCell(ofType: MovieCollectionViewCell.self, for: indexPath, shouldRegister: true)
+            let cell = collectionView.dequeueCell(ofType: MovieCollectionViewCell.self, for: indexPath, shouldRegister: true)
+            cell.movie = movies?[indexPath.row]
+            return cell
         }
     }
     
     // UICollectionViewDelegateFlowLayout
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         if collectionView == genreCollectionView {
-            let text = genreList[indexPath.row].genreName
+            let text = genres?[indexPath.row].genreName ?? ""
             let textWidth = text.getWidth(of: UIFont(name: "Geeza Pro Bold", size: 14) ?? UIFont.systemFont(ofSize: 14))
             return .init(width: textWidth + 20, height: 40)
         } else {
             return .init(width: collectionView.frame.width / 3, height: collectionView.frame.height)
         }
     }
+
+    // Delegate
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        delegate?.onMovieCellTapped(movieId: movies?[indexPath.row].id ?? 0, type: .movie)
+    }
     
-    fileprivate func resetGenreSection(_ genreId: Int) {
-        genreList.forEach { genre in
+}
+
+extension MovieWithGenreTableViewCell {
+    
+    // MARK: - Private Helpers
+    private func resetGenreSection(_ genreId: Int) {
+        genres?.forEach { genre in
             if genre.id == genreId {
                 genre.isSelected = true
             } else {
                 genre.isSelected = false
             }
         }
+        genreCollectionView.reloadData()
+    }
+    
+    private func organizeMoviesBasedOnGenre(_ movies: [Movie]) {
+        movies.forEach { movie in
+            movie.genreIds?.forEach { genreId in
+                if let _ = movieDict[genreId] {
+                    movieDict[genreId]?.insert(movie)
+                } else {
+                    movieDict[genreId] = [movie]
+                }
+            }
+        }
+    }
+    
+    private func reloadMovies(basedOn genreId: Int) {
+        movies = movieDict[genreId]?.map { $0 }
+        movieCollectionView.reloadData()
     }
     
 }

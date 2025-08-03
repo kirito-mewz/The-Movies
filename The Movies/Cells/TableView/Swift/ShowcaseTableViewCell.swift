@@ -9,11 +9,19 @@ import UIKit
 
 class ShowcaseTableViewCell: UITableViewCell {
     
+    var movies: [Movie]? {
+        didSet {
+            showcaseCollectionView.reloadData()
+        }
+    }
+    
     @IBOutlet var moreShowcasesLabel: UILabel!
     @IBOutlet var showcaseCollectionView: UICollectionView!
     @IBOutlet var collectionViewHeight: NSLayoutConstraint!
     
     var onMoreShowcasesTapped: (() -> Void)?
+    
+    var delegate: MovieItemDelegate?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -42,16 +50,29 @@ extension ShowcaseTableViewCell: UICollectionViewDataSource, UICollectionViewDel
     
     // UICollectionViewDataSource
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        return movies?.count ?? 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        return collectionView.dequeueCell(ofType: ShowcaseCollectionViewCell.self, for: indexPath, shouldRegister: true)
+        let cell = collectionView.dequeueCell(ofType: ShowcaseCollectionViewCell.self, for: indexPath, shouldRegister: true)
+        cell.movie = movies?[indexPath.row]
+        return cell
     }
     
     // UICollectionViewDelegateFlowLayout
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return .init(width: collectionView.frame.width * 0.8, height: collectionView.frame.height - 40)
+    }
+    
+    // Horizontal Scroll
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let horizontalScrollView = scrollView.subviews[(scrollView.subviews.count - 1)].subviews[0]
+        horizontalScrollView.backgroundColor = UIColor(named: "Color_Yellow")
+    }
+    
+    // Delegate
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        delegate?.onMovieCellTapped(movieId: movies?[indexPath.row].id ?? 0, type: .movie)
     }
     
 }

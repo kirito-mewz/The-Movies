@@ -1,3 +1,30 @@
-PODFILE CHECKSUM: a82d84b43c8ad4b214ca8381c812821c5a50ee7d
+PODS:
+  - Alamofire (5.10.2)
+  - SDWebImage (5.21.1):
+    - SDWebImage/Core (= 5.21.1)
+  - SDWebImage/Core (5.21.1)
+  - Wormholy (1.7.0)
+  - YoutubePlayerView (1.2.2)
+
+DEPENDENCIES:
+  - Alamofire
+  - SDWebImage
+  - Wormholy
+  - YoutubePlayerView
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - SDWebImage
+    - Wormholy
+    - YoutubePlayerView
+
+SPEC CHECKSUMS:
+  Alamofire: 7193b3b92c74a07f85569e1a6c4f4237291e7496
+  SDWebImage: f29024626962457f3470184232766516dee8dfea
+  Wormholy: ab1c8c2f02f58587a0941deb0088555ffbf039a1
+  YoutubePlayerView: e3f485006ddaf97d6931a465569501c2be779b68
+
+PODFILE CHECKSUM: 7b31d173f35c580375bc3a8dc90a24c4f4a79d2c
 
 COCOAPODS: 1.16.2

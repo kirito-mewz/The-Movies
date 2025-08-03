@@ -6,6 +6,10 @@ target 'The Movies' do
   use_frameworks!
 
   # Pods for The Movies
+  pod 'Alamofire'
+  pod 'Wormholy', :configurations => ['Debug']
+  pod 'SDWebImage'
+  pod 'YoutubePlayerView'
 
   target 'The MoviesTests' do
     inherit! :search_paths

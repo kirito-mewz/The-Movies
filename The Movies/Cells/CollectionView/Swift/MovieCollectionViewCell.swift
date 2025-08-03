@@ -6,8 +6,21 @@
 //
 
 import UIKit
+import SDWebImage
 
 class MovieCollectionViewCell: UICollectionViewCell {
+    
+    var movie: Movie? {
+        didSet {
+            guard let data = movie else { return }
+            if let imagePath = data.posterPath {
+                movieImageView.sd_setImage(with: URL(string: "\(imageBaseURL)/\(imagePath)"))
+            }
+            movieTitleLabel.text = data.title ?? data.name
+            ratingLabel.text = String(format: "%.1f", data.voteAverage ?? 0)
+            ratingControl.rating = Int(round(data.voteAverage ?? 0) * 0.5)
+        }
+    }
     
     @IBOutlet var movieImageView: UIImageView!
     @IBOutlet var movieTitleLabel: UILabel!
