@@ -40,8 +40,8 @@ extension MainViewController: UITableViewDataSource {
             return dequeueTableViewCell(ofType: CheckShowtimeTableViewCell.self, with: tableView, for: indexPath)
         case Sections.movieWithGenre.rawValue:
             let cell = dequeueTableViewCell(ofType: MovieWithGenreTableViewCell.self, with: tableView, for: indexPath)
-            cell.genres = genres
             cell.movies = popularMovies
+            cell.genres = genres
             cell.delegate = self
             return cell
         case Sections.showcase.rawValue:

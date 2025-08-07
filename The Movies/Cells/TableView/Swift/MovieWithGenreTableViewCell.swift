@@ -11,6 +11,10 @@ class MovieWithGenreTableViewCell: UITableViewCell {
     
     var genres: [GenreVO]? {
         didSet {
+            genres?.removeAll(where: { vo in
+                return movieDict[vo.id] == nil
+            })
+            
             genres?.first?.isSelected = true
             genreCollectionView.reloadData()
             
