@@ -5,7 +5,7 @@
 //  Created by Paing Htet on 03/08/2025.
 //
 
-import Foundation
+import RealmSwift
 
 // MARK: - ActorDetailResponse
 struct ActorDetailResponse: Codable {
@@ -19,7 +19,7 @@ struct ActorDetailResponse: Codable {
     let popularity: Double?
     let placeOfBirth, profilePath: String?
     let adult: Bool?
-    let imdbID: String?
+    let imdbId: String?
     let homepage: String?
 
     enum CodingKeys: String, CodingKey {
@@ -31,7 +31,32 @@ struct ActorDetailResponse: Codable {
         case placeOfBirth = "place_of_birth"
         case profilePath = "profile_path"
         case adult
-        case imdbID = "imdb_id"
+        case imdbId = "imdb_id"
         case homepage
     }
+    
+    func convertToActorDetailObject() -> ActorDetailEmbeddedObject {
+        
+        let akaList = List<String>()
+        alsoKnownAs?.forEach { akaList.append($0) }
+        
+        let object = ActorDetailEmbeddedObject()
+        object.birthday = birthday
+        object.knownForDepartment = knownForDepartment
+        object.deathday = deathday
+        object.id = id
+        object.name = name
+        object.alsoKnownAs = akaList
+        object.gender = gender
+        object.biography = biography
+        object.popularity = popularity
+        object.placeOfBirth = placeOfBirth
+        object.profilePath = profilePath
+        object.adult = adult
+        object.imdbId = imdbId
+        object.homepage = homepage
+        return object
+        
+    }
+    
 }
