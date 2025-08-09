@@ -11,8 +11,13 @@ target 'The Movies' do
   pod 'SDWebImage'
   pod 'YoutubePlayerView'
 
-  pod 'Realm'
-  pod 'RealmSwift'
+  pod 'RealmSwift', '~> 10.2'
+  pod 'RxAlamofire'
+  pod 'RxSwift'
+  pod 'RxRealm'
+  pod 'RxCocoa'
+
+  pod 'RxDataSources'
 
   target 'The MoviesTests' do
     inherit! :search_paths

@@ -1,10 +1,31 @@
 PODS:
   - Alamofire (5.10.2)
-  - Realm (20.0.3):
-    - Realm/Headers (= 20.0.3)
-  - Realm/Headers (20.0.3)
-  - RealmSwift (20.0.3):
-    - Realm (= 20.0.3)
+  - Differentiator (5.0.0)
+  - Realm (10.54.5):
+    - Realm/Headers (= 10.54.5)
+  - Realm/Headers (10.54.5)
+  - RealmSwift (10.54.5):
+    - Realm (= 10.54.5)
+  - RxAlamofire (6.1.1):
+    - RxAlamofire/Core (= 6.1.1)
+  - RxAlamofire/Core (6.1.1):
+    - Alamofire (~> 5.4)
+    - RxSwift (~> 6.0)
+  - RxCocoa (6.9.0):
+    - RxRelay (= 6.9.0)
+    - RxSwift (= 6.9.0)
+  - RxDataSources (5.0.0):
+    - Differentiator (~> 5.0)
+    - RxCocoa (~> 6.0)
+    - RxSwift (~> 6.0)
+  - RxRealm (5.0.4):
+    - Realm (~> 10.21)
+    - RealmSwift (~> 10.21)
+    - RxCocoa (~> 6.1)
+    - RxSwift (~> 6.1)
+  - RxRelay (6.9.0):
+    - RxSwift (= 6.9.0)
+  - RxSwift (6.9.0)
   - SDWebImage (5.21.1):
     - SDWebImage/Core (= 5.21.1)
   - SDWebImage/Core (5.21.1)
@@ -13,8 +34,12 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire
-  - Realm
-  - RealmSwift
+  - RealmSwift (~> 10.2)
+  - RxAlamofire
+  - RxCocoa
+  - RxDataSources
+  - RxRealm
+  - RxSwift
   - SDWebImage
   - Wormholy
   - YoutubePlayerView
@@ -22,20 +47,34 @@ DEPENDENCIES:
 SPEC REPOS:
   trunk:
     - Alamofire
+    - Differentiator
     - Realm
     - RealmSwift
+    - RxAlamofire
+    - RxCocoa
+    - RxDataSources
+    - RxRealm
+    - RxRelay
+    - RxSwift
     - SDWebImage
     - Wormholy
     - YoutubePlayerView
 
 SPEC CHECKSUMS:
   Alamofire: 7193b3b92c74a07f85569e1a6c4f4237291e7496
-  Realm: 853e5089d6042dff807bda000277eadfe2da93d2
-  RealmSwift: f33c19577cefcbf681345d721fcbc7b42be4c949
+  Differentiator: e8497ceab83c1b10ca233716d547b9af21b9344d
+  Realm: ac6ab7d43b76db2bdb48bbd097019bb621d860b8
+  RealmSwift: 7c258367cc498594aa989b7d9620989a276ad7f4
+  RxAlamofire: beb75a1c452d0de225651db4903f5d29d034a620
+  RxCocoa: ac16414696ae706516be3e1ab00fcce5bdc9be8a
+  RxDataSources: aa47cc1ed6c500fa0dfecac5c979b723542d79cf
+  RxRealm: 666c8785327fe2fff972a3093b35dc7055c1ca38
+  RxRelay: 6b0c930e5cef57d5fe2032571e5e65b78e3cbdb1
+  RxSwift: 31649ace6aceeb422e16ff71c60804f9c3281ed9
   SDWebImage: f29024626962457f3470184232766516dee8dfea
   Wormholy: ab1c8c2f02f58587a0941deb0088555ffbf039a1
   YoutubePlayerView: e3f485006ddaf97d6931a465569501c2be779b68
 
-PODFILE CHECKSUM: 7e81d4a7ed2f6cd27d0901d95bd20ddc679e85ac
+PODFILE CHECKSUM: be445ffdf7b5809d15a130fd5c756183b064da7f
 
 COCOAPODS: 1.16.2

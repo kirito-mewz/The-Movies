@@ -5,9 +5,9 @@
 //  Created by Paing Htet on 03/08/2025.
 //
 
-import Foundation
+import Alamofire
 
-enum MDBEndPoint {
+enum MDBEndPoint: URLConvertible, URLRequestConvertible {
     
     // Main
     case upcomingMovies
@@ -27,6 +27,16 @@ enum MDBEndPoint {
     // Actor Detail
     case actorDetail(actorId: Int)
     case actorDetailForMovies(actorId: Int)
+    
+    func asURL() throws -> URL {
+        return URL(string: urlString)!
+    }
+    
+    func asURLRequest() throws -> URLRequest {
+        var request = URLRequest(url: try asURL())
+        request.cachePolicy = .reloadIgnoringLocalCacheData
+        return request
+    }
     
     var urlString: String {
         get {
