@@ -9,29 +9,52 @@ import Foundation
 
 extension ActorDetailViewController {
     
-    func loadData() {
+//    func loadData() {
+//        
+//        // Fetch Actor Detail
+//        actorModel.getActorDetail(actorId: actorId) { [weak self] result in
+//            do {
+//                self?.detail = try result.get()
+//                self?.navigationItem.title = self?.detail?.name
+//            } catch {
+//                print("[Error: while fetching ActorDetail]", error)
+//            }
+//        }
+//        
+//        // Fetch Actor Credits
+//        actorModel.getActorDetailForMovies(actorId: actorId) { [weak self] result in
+//            do {
+//                let response = try result.get()
+//                response.movies?.forEach { self?.movies.append($0.convertToMovie()) }
+//                self?.knownForCollectionView.reloadData()
+//            } catch {
+//                print("[Error: while fetching ActorCredits]", error)
+//            }
+//        }
+//        
+//    }
+    
+    func rxLoadData() {
         
-        // Fetch Actor Detail
-        actorModel.getActorDetail(actorId: actorId) { [weak self] result in
-            do {
-                self?.detail = try result.get()
+        rxActorModel.getActorDetail(actorId: actorId)
+            .subscribe { [weak self] response in
+                self?.detail = response
                 self?.navigationItem.title = self?.detail?.name
-            } catch {
-                print("[Error: while fetching ActorDetail]", error)
+            } onError: { error in
+                print("\(#function) \(error)")
             }
-        }
+            .disposed(by: disposeBag)
         
-        // Fetch Actor Credits
-        actorModel.getActorDetailForMovies(actorId: actorId) { [weak self] result in
-            do {
-                let response = try result.get()
-                response.movies?.forEach { self?.movies.append($0.convertToMovie()) }
+        rxActorModel.getActorDetailForMovies(actorId: actorId)
+            .compactMap { $0.movies }
+            .subscribe { [weak self] movies in
+                movies.forEach { self?.movies.append($0.convertToMovie()) }
                 self?.knownForCollectionView.reloadData()
-            } catch {
-                print("[Error: while fetching ActorCredits]", error)
+            } onError: { error in
+                print("\(#function) \(error)")
             }
-        }
-        
+            .disposed(by: disposeBag)
     }
+    
     
 }

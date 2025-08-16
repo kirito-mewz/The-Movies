@@ -14,7 +14,7 @@ protocol RxMovieRepository {
     func getMovies(type: MovieDisplayType, pageNo: Int) -> Observable<[Movie]>
     
     func saveMovieDetail(movieId id: Int, detail: MovieDetailResponse)
-    func getMovieDetail(movieId id: Int) -> Observable<MovieDetailResponse>
+    func getMovieDetail(movieId id: Int) -> Observable<MovieDetailResponse?>
     
 }
 
@@ -55,9 +55,9 @@ final class RxMovieRepositoryImpl: BaseRepository, RxMovieRepository {
         }
     }
     
-    func getMovieDetail(movieId id: Int) -> RxSwift.Observable<MovieDetailResponse> {
+    func getMovieDetail(movieId id: Int) -> RxSwift.Observable<MovieDetailResponse?> {
         let movieObject = realm.object(ofType: MovieObject.self, forPrimaryKey: id)
-        return Observable.of((movieObject?.detail?.convertToMovieDetailResponse())!)
+        return Observable.of(movieObject?.detail?.convertToMovieDetailResponse())
     }
     
     

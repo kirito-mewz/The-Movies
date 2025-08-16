@@ -7,19 +7,19 @@
 
 import UIKit
 
-extension SearchViewController: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+extension SearchViewController: UICollectionViewDelegateFlowLayout {
 
-    // UICollectionViewDataSource
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return movies?.count ?? 0
-    }
+//    // UICollectionViewDataSource
+//    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+//        return movies?.count ?? 0
+//    }
     
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueCell(ofType: MovieCollectionViewCell.self, for: indexPath, shouldRegister: true)
-        cell.movie = movies?[indexPath.row]
-        return cell
-    }
-    
+//    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+//        let cell = collectionView.dequeueCell(ofType: MovieCollectionViewCell.self, for: indexPath, shouldRegister: true)
+//        cell.movie = movies?[indexPath.row]
+//        return cell
+//    }
+//    
     // UICollectionViewDelegateFlowLayout
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let width = (collectionView.frame.width - 20 - ((noOfCols - 1) * spacing)) / noOfCols
@@ -43,19 +43,19 @@ extension SearchViewController: UICollectionViewDataSource, UICollectionViewDele
         }
     }
     
-    // Loading movies while scrolling
-    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
-        let lastRow = indexPath.row == (movies?.count ?? 0) - 1
-        if lastRow && currentPage <= totalPages {
-            currentPage += 1
-            searchMovies(pageNo: currentPage)
-        }
-    }
+//    // Loading movies while scrolling
+//    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+//        let lastRow = indexPath.row == (movies?.count ?? 0) - 1
+//        if lastRow && currentPage <= totalPages {
+//            currentPage += 1
+//            searchMovies(pageNo: currentPage)
+//        }
+//    }
     
-    // Delegate
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        self.onMovieCellTapped(movieId: movies?[indexPath.row].id, type: .movie)
-    }
+//    // Delegate
+//    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+//        self.onMovieCellTapped(movieId: movies?[indexPath.row].id, type: .movie)
+//    }
     
 }
 

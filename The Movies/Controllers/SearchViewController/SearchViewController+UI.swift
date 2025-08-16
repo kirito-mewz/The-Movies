@@ -11,7 +11,7 @@ extension SearchViewController {
     
     func setupSearchBar() {
         let searchBar = searchController.searchBar
-        searchBar.delegate = self
+        // searchBar.delegate = self
         
         let colorYellow = UIColor(named: "Color_Yellow")!
         
@@ -35,17 +35,17 @@ extension SearchViewController {
     
 }
 
-extension SearchViewController: UISearchResultsUpdating, UISearchBarDelegate {
-    func updateSearchResults(for searchController: UISearchController) {
-        if let text = searchController.searchBar.text, !text.isEmpty {
-            currentPage = 1
-            searchText = text
-            searchMovies()
-        }
-    }
-    
-    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
-        movies = []
-        collectionView.reloadData()
-    }
-}
+//extension SearchViewController: UISearchResultsUpdating, UISearchBarDelegate {
+//    func updateSearchResults(for searchController: UISearchController) {
+//        if let text = searchController.searchBar.text, !text.isEmpty {
+//            currentPage = 1
+//            searchText = text
+//            searchMovies()
+//        }
+//    }
+//    
+//    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+//        movies = []
+//        collectionView.reloadData()
+//    }
+//}

@@ -15,7 +15,7 @@ protocol RxMovieModel {
     func getShowcaseMovies(pageNo: Int?) -> Observable<MovieResponse>
     func getSearchMovies(with keyword: String, pageNo: Int) -> Observable<MovieResponse>
     
-    func getMovieDetail(movieId id: Int, contentType: MovieFetchType) -> Observable<MovieDetailResponse>
+    func getMovieDetail(movieId id: Int, contentType: MovieFetchType) -> Observable<MovieDetailResponse?>
     func getMovieTrailer(movieId id: Int, contentType: MovieFetchType) -> Observable<Trailer>
     func getMovieDetailForActors(movieId id: Int, contentType: MovieFetchType) -> Observable<[Actor]>
     func getMovieDetailForSimilarMovies(movieId id: Int, contentType: MovieFetchType) -> Observable<MovieResponse>
@@ -93,14 +93,14 @@ final class RxMovieModelImpl: BaseModel, RxMovieModel {
         rxNetworkAgent.fetchSearchMovies(with: keyword, pageNo: pageNo)
     }
     
-    func getMovieDetail(movieId id: Int, contentType: MovieFetchType) -> RxSwift.Observable<MovieDetailResponse> {
+    func getMovieDetail(movieId id: Int, contentType: MovieFetchType) -> RxSwift.Observable<MovieDetailResponse?> {
         rxNetworkAgent.fetchMovieDetail(movieId: id, contentType: contentType)
             .do { [weak self] response in
                 self?.rxMovieRepo.saveMovieDetail(movieId: id, detail: response)
             } onError: { error in
                 print("\(#function) \(error)")
             }
-            .flatMap { response -> Observable<MovieDetailResponse> in
+            .flatMap { response -> Observable<MovieDetailResponse?> in
                 self.rxMovieRepo.getMovieDetail(movieId: response.id ?? -1)
             }
     }

@@ -7,6 +7,7 @@
 
 import UIKit
 import SDWebImage
+import RxSwift
 
 class MovieDetailViewController: UIViewController, Storyboarded {
 
@@ -32,7 +33,12 @@ class MovieDetailViewController: UIViewController, Storyboarded {
     @IBOutlet var similarMoviesCollectionView: UICollectionView!
     
     // MARK:  - Properties
-    var movidId: Int = -1
+    var movieId: Int = -1 {
+        didSet {
+            rxLoadData()
+        }
+    }
+    
     var contentType: MovieFetchType = .movie
     
     var detail: MovieDetailResponse?
@@ -40,7 +46,9 @@ class MovieDetailViewController: UIViewController, Storyboarded {
     var companies: [ProductionCompany]?
     var similarMovies: [Movie]?
     
-    let movieModel: MovieModel = MovieModelImpl.shared
+    let rxMovieModel: RxMovieModel = RxMovieModelImpl.shared
+    
+    let disposeBag: DisposeBag = DisposeBag()
     
     // MARK: - Lifecycles
     override func viewDidLoad() {
@@ -53,14 +61,15 @@ class MovieDetailViewController: UIViewController, Storyboarded {
             $0?.delegate = self
             $0?.dataSource = self
         }
-        
-        loadData()
+        // loadData()
+        // rxLoadData()
         
     }
     
     // MARK: - Target/Action Handlers
     @IBAction func onPlayTrailerTapped(_ sender: Any) {
-        self.downloadTrailer()
+//        self.downloadTrailer()
+        self.rxDownloadTrailer()
     }
     
     // MARK: - Helpers

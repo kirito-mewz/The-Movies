@@ -7,6 +7,7 @@
 
 import UIKit
 import SDWebImage
+import RxSwift
 
 class ActorDetailViewController: UIViewController, Storyboarded {
     
@@ -35,7 +36,10 @@ class ActorDetailViewController: UIViewController, Storyboarded {
     var actorId: Int = -1
     var movies: [Movie] = []
     
-    let actorModel: ActorModel = ActorModelImpl.shared
+    // let actorModel: ActorModel = ActorModelImpl.shared
+    let rxActorModel: RxActorModel = RxActorModelImpl.shared
+    
+    let disposeBag = DisposeBag()
     
     // MARK: - Lifecycles
     override func viewDidLoad() {
@@ -44,7 +48,8 @@ class ActorDetailViewController: UIViewController, Storyboarded {
         knownForCollectionView.delegate = self
         knownForCollectionView.dataSource = self
         
-        loadData()
+        // loadData()
+        rxLoadData()
         
     }
     

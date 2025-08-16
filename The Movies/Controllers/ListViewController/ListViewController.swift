@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import RxSwift
 
 class ListViewController: UIViewController, Storyboarded {
     
@@ -35,6 +36,10 @@ class ListViewController: UIViewController, Storyboarded {
     
     let movieModel: MovieModel = MovieModelImpl.shared
     let actorModel: ActorModel = ActorModelImpl.shared
+    
+    var observableNoOfPages: Observable<Int> = .just(1)
+    lazy var observableMovieList: BehaviorSubject<[Movie]> = BehaviorSubject(value: [])
+    lazy var observableActorList: BehaviorSubject<[Actor]> = BehaviorSubject(value: [])
     
     // MARK: - Lifecycles
     override func viewDidLoad() {

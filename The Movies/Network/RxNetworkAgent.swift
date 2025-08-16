@@ -79,7 +79,7 @@ class RxNetworkAgentImpl: RxNetworkAgent {
     func fetchMovieDetailForActors(movieId id: Int, contentType: MovieFetchType) -> RxSwift.Observable<[Actor]> {
         RxAlamofire.requestDecodable(MDBEndPoint.movieDetailForActors(movieId: id, contentType: contentType))
             .do { response in
-                print(response)
+
             } onError: { error in
                 print("\(#function) \(error)")
             }

@@ -103,6 +103,7 @@
 		66DE3B5F2E47CC05002CCC06 /* RxMovieModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66DE3B5E2E47CC05002CCC06 /* RxMovieModel.swift */; };
 		66DE3B612E47CC0E002CCC06 /* RxGenreModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66DE3B602E47CC0E002CCC06 /* RxGenreModel.swift */; };
 		66DE3B632E47CC16002CCC06 /* RxActorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66DE3B622E47CC16002CCC06 /* RxActorModel.swift */; };
+		66DE3B652E488AFA002CCC06 /* MainSectionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66DE3B642E488AFA002CCC06 /* MainSectionModel.swift */; };
 		75DC464DEC6912B6BD6345BB /* Pods_The_MoviesTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0141EEF565BCABB765DE2001 /* Pods_The_MoviesTests.framework */; };
 		E09588A13D3B6272B2C4AAC6 /* Pods_The_Movies.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 753E0634F40680EB10CBCA33 /* Pods_The_Movies.framework */; };
 /* End PBXBuildFile section */
@@ -232,6 +233,7 @@
 		66DE3B5E2E47CC05002CCC06 /* RxMovieModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxMovieModel.swift; sourceTree = "<group>"; };
 		66DE3B602E47CC0E002CCC06 /* RxGenreModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxGenreModel.swift; sourceTree = "<group>"; };
 		66DE3B622E47CC16002CCC06 /* RxActorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxActorModel.swift; sourceTree = "<group>"; };
+		66DE3B642E488AFA002CCC06 /* MainSectionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainSectionModel.swift; sourceTree = "<group>"; };
 		753E0634F40680EB10CBCA33 /* Pods_The_Movies.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_The_Movies.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6AD2CAB980C5940ACEC74E7 /* Pods-The Movies-The MoviesUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-The Movies-The MoviesUITests.debug.xcconfig"; path = "Target Support Files/Pods-The Movies-The MoviesUITests/Pods-The Movies-The MoviesUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -327,6 +329,7 @@
 				66BB6DB32E3C9A28001FB331 /* MainViewController.swift */,
 				663D45AE2E3FD32D006304DB /* MainViewController+Delegates.swift */,
 				663D45B02E3FD336006304DB /* MainViewController+Data.swift */,
+				66DE3B642E488AFA002CCC06 /* MainSectionModel.swift */,
 			);
 			path = MainViewController;
 			sourceTree = "<group>";
@@ -897,9 +900,13 @@
 			inputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-The Movies-The MoviesUITests/Pods-The Movies-The MoviesUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
+			inputPaths = (
+			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-The Movies-The MoviesUITests/Pods-The Movies-The MoviesUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -936,9 +943,13 @@
 			inputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-The Movies/Pods-The Movies-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
+			inputPaths = (
+			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-The Movies/Pods-The Movies-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -990,6 +1001,7 @@
 				66BB6DF32E3D4798001FB331 /* ActorCollectionViewCell.swift in Sources */,
 				66BB6E0F2E3D53B0001FB331 /* ShowcaseTableViewCell.swift in Sources */,
 				66BB6E172E3DC703001FB331 /* UICollectionView+Extensions.swift in Sources */,
+				66DE3B652E488AFA002CCC06 /* MainSectionModel.swift in Sources */,
 				66BB6DFB2E3D47B8001FB331 /* CompanyCollectionViewCell.swift in Sources */,
 				66BB6DFF2E3D5373001FB331 /* MovieSliderTableViewCell.swift in Sources */,
 				66BB6E072E3D5396001FB331 /* CheckShowtimeTableViewCell.swift in Sources */,
